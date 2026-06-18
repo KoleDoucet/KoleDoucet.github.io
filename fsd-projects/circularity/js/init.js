@@ -72,23 +72,14 @@ game.checkCirclePosition(circles[4]);
       }
 
       // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-
+if (circle.x < 0) {
+  circle.x = canvas.width
+} if (circle.y < 0) {
+  circle.y = canvas.height
+} if (circle.y > canvas.height) {
+  circle.y = 0
+}
   
-
-// YOUR TODO 6 CODE ENDS HERE //////////////////////////
-    };
-
-    /////////////////////////////////////////////////////////////
-    // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
-    /////////////////////////////////////////////////////////////
-
-    view.addChild(fps);
-    app.addUpdateable(fps);
-
-    game.circle = circle;
-    game.circles = circles;
-    game.drawCircle = drawCircle;
-    game.update = update;
 
     app.addUpdateable(window.opspark.game);
   };
